@@ -12,6 +12,7 @@ The project currently includes:
 * Player-level match performance statistics
 * Tournament-level performance overview
 * Interactive player selection and stats display
+* Weight-based dynamic scoring system and ranking
 
 ## Data Source
 
@@ -48,7 +49,7 @@ Dynamic Score =
     + (1 − Match Weight) × Global Rank
 ```
 
-The **Per Match vs Global** weight can be adjusted interactively in Power BI using a slider. This allows users to explore how the player ranking changes when placing more emphasis on performance in individual matches versus consistency relative to the overall tournament.
+The **Per Match vs Global** weight can be adjusted interactively in `FWC2022_DynamicScore.pbix` using a slider. This allows users to explore how the player ranking changes when placing more emphasis on performance in individual matches versus consistency relative to the overall tournament.
 
 'Positive' and 'negative', 'offensive' and 'defensive' statistics are treated separately based on domain knowledge.
 
@@ -76,13 +77,13 @@ Python was used to:
 * `FWC2022_Abstract.pbix` — Power BI tournament overview dashboard
 * `FWC2022_PlayerCard.pbix` — Power BI player-level performance dashboard
 * `Dynamic_Scoring_System.ipynb` — Python notebook for calculating player performance percentile ranks and preparing the scoring data.
-* `player_stats_rank.xlsx` — Processed player-match dataset containing the ranking metrics used by the scoring system.
+* `player_stats_rank.xlsx` — Processed player-match dataset containing the percentile ranking metrics used by the scoring system.
 * `FWC2022_DynamicScore.pbix` — Power BI report implementing the interactive weighting and dynamic ranking.
 
 ## Tools
 
 * Python
-* Pandas
 * Power BI
+* Pandas
 * Excel
 * StatsBomb Open Data
