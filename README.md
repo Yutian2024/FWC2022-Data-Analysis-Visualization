@@ -25,13 +25,32 @@ Source: [StatsBomb Open Data](https://github.com/statsbomb/open-data)
 
 ### 1. Tournament Overview
 
-The first Power BI report provides an overview of player and tournament performance.
+`FWC2022_Abstract.pbix` provides an overview of player and tournament performance.
 
 ### 2. Player Performance Explorer
 
-The second Power BI report allows users to select an individual player and examine their stats across the tournament.
+`FWC2022_PlayerCard.pbix` allows users to select an individual player and examine their stats across the tournament.
 
-The current version focuses on match-level statistics rather than a single overall player rating or impact score.
+### 3. Dynamic Scoring System
+
+## Dynamic Scoring System
+
+This stage of the project introduces a dynamic player scoring system that combines two perspectives of player performance:
+
+* **Per Match:** The player's performance percentile compared with other players in the same match.
+* **Global:** The player's performance percentile compared with all player-match performances across the tournament.
+
+A weighted score is calculated dynamically as:
+
+```text
+Dynamic Score =
+    Match Weight × Per Match Rank
+    + (1 − Match Weight) × Global Rank
+```
+
+The **Per Match vs Global** weight can be adjusted interactively in Power BI using a slider. This allows users to explore how the player ranking changes when placing more emphasis on performance in individual matches versus consistency relative to the overall tournament.
+
+'Positive' and 'negative', 'offensive' and 'defensive' statistics are treated separately based on domain knowledge.
 
 ## Data Processing
 
@@ -41,9 +60,13 @@ Python was used to:
 
 * Filter and clean event-level data
 * Exclude penalty shootout events from the current analysis
-* Aggregate events into a player-stats dataset
-* Calculate passing and shooting statistics
+* Aggregate event-level data into a player-match statistics dataset
+* Calculate passing, shooting, possession, defensive, and other player performance metrics
 * Handle missing values according to the meaning of each metric
+* Calculate percentile ranks relative to players in the same match
+* Calculate percentile ranks across all player-match observations in the tournament
+* Prepare the ranking data for a weighted player scoring system
+* Separate positive and negative, offensive and defensive statistics
 * Export the processed data for use in Power BI
 
 ## Repository Contents
@@ -52,6 +75,9 @@ Python was used to:
 * `dataset_preprocessing.ipynb` — Python code used to process and aggregate the event data
 * `FWC2022_Abstract.pbix` — Power BI tournament overview dashboard
 * `FWC2022_PlayerCard.pbix` — Power BI player-level performance dashboard
+* `Dynamic_Scoring_System.ipynb` — Python notebook for calculating player performance percentile ranks and preparing the scoring data.
+* `player_stats_rank.xlsx` — Processed player-match dataset containing the ranking metrics used by the scoring system.
+* `FWC2022_DynamicScore.pbix` — Power BI report implementing the interactive weighting and dynamic ranking.
 
 ## Tools
 
