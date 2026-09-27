@@ -4,7 +4,7 @@ A personal football analytics project using event-level match data to explore pl
 
 ## Project Overview
 
-This project analyzes player performance during the **2022 FIFA World Cup** using detailed match event data. The current version focuses on transforming event-level data into a player-match dataset and building interactive Power BI dashboards.
+This project analyzes player performance during the **2022 FIFA World Cup** using detailed match event data.
 
 The project currently includes:
 
@@ -12,6 +12,7 @@ The project currently includes:
 * Player-level match performance statistics
 * Tournament-level performance overview
 * Interactive player selection and stats display
+* Percentile ranking metrics of 18 data items
 * Weight-based dynamic scoring system and ranking
 
 ## Data Source
