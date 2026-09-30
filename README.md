@@ -325,5 +325,3 @@ This project uses StatsBomb Open Data.
 Please refer to the [StatsBomb Open Data repository](https://github.com/statsbomb/open-data) for the applicable data license and attribution requirements.
 
 This repository is intended for educational and exploratory football analytics purposes.
-
-
