@@ -278,12 +278,12 @@ The player table includes an Actual MVP field. Rows with MVP = 1 are highlighted
 * `dataset_preprocessing.ipynb` — Python code used to process and aggregate the event data
 * `FWC2022_Abstract.pbix` — Power BI tournament overview dashboard
 * `FWC2022_PlayerCard.pbix` — Power BI player-level performance dashboard
-* `Dynamic_Scoring_System.ipynb` — Python notebook for calculating player performance percentile ranks and preparing the scoring data.
-* `player_stats_rank.xlsx` — Processed player-match dataset containing the percentile ranking metrics used by the scoring system.
-* `FWC2022_DynamicScore.pbix` — Power BI report implementing the interactive weighting and dynamic ranking.
-* `model.ipynb` — The main modelling notebook containing data loading, baseline experiments, neural network experiments, repeated grouped cross-validation, relative feature engineering, XGBoost evaluation, XGBRanker evaluation, winner-only MVP reranking, final score generation, and export logic.
-* `player_performance_rank.xlsx` — The final player-match dataset containing player statistics, match result information, model scores, performance ranks, MVP ranks, and Dynamic Score baseline values.
-* `FWC2022_RankingSystem.pbix` — Power BI report for interactive exploration of the final player performance ranking system.
+* `Dynamic_Scoring_System.ipynb` — Python notebook for calculating player performance percentile ranks and preparing the scoring data
+* `player_stats_rank.xlsx` — Processed player-match dataset containing the percentile ranking metrics used by the scoring system
+* `FWC2022_DynamicScore.pbix` — Power BI report implementing the interactive weighting and dynamic ranking
+* `model.ipynb` — The main modelling notebook containing data loading, baseline experiments, neural network experiments, repeated grouped cross-validation, relative feature engineering, XGBoost evaluation, XGBRanker evaluation, winner-only MVP reranking, final score generation, and export logic
+* `player_performance_rank.xlsx` — The final player-match dataset containing player statistics, match result information, model scores, performance ranks, MVP ranks, and Dynamic Score baseline values
+* `FWC2022_RankingSystem.pbix` — Power BI report for interactive exploration of the final player performance ranking system
 
 ## Reproducing the Analysis
 
